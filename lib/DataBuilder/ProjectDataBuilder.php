@@ -90,7 +90,7 @@ class ProjectDataBuilder implements DataBuilder
     private function buildProjectData(string $repositoryName) : array
     {
         // checkout master branch
-        $this->projectGitSyncer->checkoutMaster($repositoryName);
+        $this->projectGitSyncer->checkoutDefaultBranch($repositoryName);
 
         $projectData = array_replace(
             self::DEFAULTS,
@@ -248,7 +248,7 @@ class ProjectDataBuilder implements DataBuilder
         }
 
         // switch back to master
-        $this->projectGitSyncer->checkoutMaster($repositoryName);
+        $this->projectGitSyncer->checkoutDefaultBranch($repositoryName);
 
         return $projectVersions;
     }

@@ -90,7 +90,7 @@ class ProjectGitSyncerTest extends TestCase
                 $this->projectsDir
             ));
 
-        $this->projectGitSyncer->checkoutMaster($repositoryName);
+        $this->projectGitSyncer->checkoutDefaultBranch($repositoryName);
     }
 
     public function testCheckoutBranch() : void

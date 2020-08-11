@@ -107,7 +107,7 @@ class BuildDocs
                 $this->searchIndexer->buildSearchIndexes($project, $version, $searchDocuments);
             }
 
-            $this->projectGitSyncer->checkoutMaster($project->getRepositoryName());
+            $this->projectGitSyncer->checkoutDefaultBranch($project->getRepositoryName());
         }
     }
 
